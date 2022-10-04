@@ -30,4 +30,28 @@ describe.skip('Utils test suite', () => {
         expect(expectedEquery).toBe(expectedEquery);
         console.log('past simple url');
     });
+    //test.todo('test invalid url');
+    test.only('test invalid url',() => {
+        function expectedError(){
+            Utils.parseUrl('');
+        }
+        expect(expectedError).toThrowError();
+        console.log('Test invalid')
+    });
+    test.only('test invalid url with arrow function',() => {
+        const expectedError = () => {
+            Utils.parseUrl('');
+        }
+        expect(expectedError).toThrowError();
+        console.log('Test invalid')
+    });
+    test.only('test invalid url with try catch',() => {
+        try {
+            Utils.parseUrl('');
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+            expect(error).toHaveProperty('message', 'Empty url!');
+        }
+        console.log('Test invalid try catch')
+    });
 });
