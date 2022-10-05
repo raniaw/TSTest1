@@ -9,7 +9,7 @@
         "args": [
           "--runTestsByPath",
           "--config",
-          "jest.config.js"
+          "jest.config.ts"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
