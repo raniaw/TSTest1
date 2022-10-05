@@ -1,5 +1,7 @@
 import { parse, UrlWithParsedQuery } from "url";
 
+// with this comment ignore next function for testing
+/* istanbul ignore next */
 export class Utils {
     public static toUCase(arg:string): string {
         return arg.toUpperCase();
